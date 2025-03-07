@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.jQuery 주요함수</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+    <script>
+        $(function(){
+
+            //jQuery 객체 생성
+            const lis = $('ul > li');
+
+            // eq() : 문서 객체 배열 탐색
+            lis.eq(0).css('color', 'red');
+            lis.eq(3).css('color', 'blue');
+
+        });
+
+    </script>
+</head>
+<body>
+    <h3>2.jQuery 주요함수</h3>
+    
+    <ul>
+        <li id="seoul">서울</li>
+        <li>대전</li>
+        <li>대구</li>
+        <li class="busan">부산</li>
+        <li>광주</li>
+    </ul>
+
+</body>
+</html>

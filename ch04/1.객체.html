@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.객체</title>
+    <script src="./js/Account.js"></script>
+</head>
+<body>
+    <h3>1.객체</h3>
+    <script>
+        const kb = new Account('국민은행' , '101-11-1001', '김유신', 1000);
+        kb.deposit(35000);
+        kb.withdraw(6000);
+        kb.show();
+
+        const wr = new Account('우리은행', '101-12-1002', '김춘추', 5000);
+        wr.deposit(10000);
+        wr.withdraw(7000);
+        wr.show();
+
+        const sonata = {
+            name: '소나타',
+            color: '흰색',
+            speed: 0,
+            speedUp:function(speed){
+                this.speed += speed;
+            },
+            speedDown:function(speed){
+                this.speed -= speed;
+            },
+            show:function(){
+                document.write('차량명 : ' + this.name + '<br>');
+                document.write('차량색 : ' + this.color + '<br>');
+                document.write('차량속도 : ' + this.speed + '<br>');
+            }
+        };
+
+        sonata.speedUp(80);
+        sonata.speedDown(20);
+        sonata.show();
+
+        const { name, color, speed } = sonata;
+        // sonata 객체의 인자를 변수로 저장
+
+        document.write('<br>name : ' + name + '<br>');
+        document.write('color : ' + color + '<br>');
+        document.write('speed : ' + speed + '<br>');
+
+    </script>
+</body>
+</html>

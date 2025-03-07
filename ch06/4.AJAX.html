@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<script>
+    const btnUser1 = document.getElementById('btnUser1');
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+        const btnUser1 = document.getElementById('btnUser1');
+        btnUser1.onclick = function(){
+        
+            // AJAX 객체 생성
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET','./data/user1.json');
+            
+            //요청
+            xhr.send();
+
+            // 응답 처리 
+            xhr.onreadystatechange = function(){
+
+                // 응답 완료
+                if(xhr.readyState = XMLHttpRequest.DONE){
+                    
+                    // 요청 성공
+                    if(xhr.status == 200){
+                            
+                        const resData = xhr.responseText;
+                        console.log(Data);
+                    }
+                }
+            }
+
+
+
+
+
+
+
+
+
+        }
+    });
+
+</script>
+<body>
+    <h3>4.AJAX</h3>
+
+    <button id="btnUser1">user1 데이터 요청</button>
+    <p id="user1">
+        아이디 : <span></span><br>
+        이름 : <span></span><br>
+        나이 : <span></span><br>
+        주소 : <span></span><br>
+    </p>
+    
+</body>
+</html>
