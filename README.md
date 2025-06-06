@@ -1,5 +1,4 @@
-# JavaScript 학습 요약 (02/10 ~ 02/20)
-
+# JavaScript 학습 요약
 ## JavaScript 개요 및 개발환경 구축
 - **JavaScript**: 웹 페이지의 **동적인 기능** 구현을 위한 프로그래밍 언어
 - **개발 환경 구축**: **Node.js**, **npm (Node Package Manager)** 등을 이용한 개발 환경 설정
